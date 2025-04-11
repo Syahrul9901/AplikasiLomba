@@ -7,24 +7,29 @@
     <link rel="stylesheet" href="{{ asset ('bootstrap/css/bootstrap.css') }}">
 </head>
 <body>
-    <div>
+    <div class="text-center">
         <h2>Registrasi WebGame</h2>
         <p>Silahkan isi form registrasi dibawah ini</p>
     </div>
-    <div>
-        <div>
-            <div>
-                <div>
-                    <form action="">
-                        <label>Nama Lengkap</label>
-                        <input type="text" name="name" class="form-control mb-2">
-                        <label>Email Address</label>
-                        <input type="text" name="email" class="form-control mb-2">
-                        <label></label>
-                    </form>
+    <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-start">
+                        <form action="" method="post">
+                            @csrf
+                            <label>Nama Lengkap</label>
+                            <input type="text" name="name" class="form-control mb-2">
+                            <label>Email Address</label>
+                            <input type="text" name="email" class="form-control mb-2">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control mb-2">
+                            <button class="btn btn-primary">Submit registrasi</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
